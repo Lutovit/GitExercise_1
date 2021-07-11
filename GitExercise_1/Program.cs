@@ -147,6 +147,9 @@ namespace GitExercise_1
             Rectangle R1 = new Rectangle { p1 = new Point { x = 0, y = 0 }, p2 = new Point { x = 3, y = 0 }, p3 = new Point { x = 3, y = 4 }, p4 = new Point { x = 0, y = 4 } };
             Console.WriteLine("Площадь прямоугольника R1 = " + R1.Area());
 
+            Rectangle R2 = new Rectangle { p1 = new Point { x = -10, y = -10 }, p2 = new Point { x = 0, y = -10 }, p3 = new Point { x = 0, y = 0 }, p4 = new Point { x = -10, y = 0 } };
+            Console.WriteLine("Площадь прямоугольника R2 = " + R2.Area());
+
             Console.ReadLine();
         }
     }
