@@ -32,6 +32,8 @@ namespace GitExercise_1
     {
         public Point p1 { set; get; }
         public Point p2 { set; get; }
+
+
         public Line() 
         {
         
@@ -78,7 +80,13 @@ namespace GitExercise_1
 
         public double Area()
         {
-            throw new NotImplementedException();
+            double a = Line.Length(p1, p2);
+            double b = Line.Length(p2, p3);
+            double c = Line.Length(p3, p1);
+
+            double p = (a + b + c) / 2.0;
+
+            return Math.Sqrt(p*((p - a) * (p - b) * (p - c)));
         }
     }
 
@@ -99,8 +107,9 @@ namespace GitExercise_1
             Line l1 = new Line(p2, p3);
             Console.WriteLine("Длина = " + l1.Length());
             Console.WriteLine("Длина = " + Line.Length(new Point { x=-10, y=12}, new Point { x=0.1, y=3.742}));
-            
 
+            Triangle T1 = new Triangle { p1 = new Point {x=0, y=0 }, p2 = new Point {x=3, y=0 }, p3 = new Point {x=3, y=4 } };
+            Console.WriteLine("Площадь треугольника Т1 = " + T1.Area() );
 
 
             Console.ReadLine();
