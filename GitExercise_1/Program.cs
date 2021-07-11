@@ -125,6 +125,33 @@ namespace GitExercise_1
 
 
 
+    public class Circle : IShape
+    {
+        public static int number = 0;
+        public Point centrPoint { set; get; }
+        public double radius { set; get; }
+
+        public Circle()
+        {
+            number++;
+            centrPoint = new Point { x = 0, y = 0 };
+            radius = 1;
+        }
+
+        public Circle(Point centrPoint, double radius)
+        {
+            number++;
+            this.centrPoint = centrPoint;
+           this.radius = radius;
+        }
+
+        public double Area()
+        {
+            return Math.PI * radius * radius;
+        }
+    }
+
+
 
 
     class Program
@@ -149,6 +176,9 @@ namespace GitExercise_1
 
             Rectangle R2 = new Rectangle { p1 = new Point { x = -10, y = -10 }, p2 = new Point { x = 0, y = -10 }, p3 = new Point { x = 0, y = 0 }, p4 = new Point { x = -10, y = 0 } };
             Console.WriteLine("Площадь прямоугольника R2 = " + R2.Area());
+
+            Circle C1 = new Circle(new Point { x = 0, y = 10 }, 10);
+            Console.WriteLine("Площадь круга С1=" + C1.Area());
 
             Console.ReadLine();
         }
