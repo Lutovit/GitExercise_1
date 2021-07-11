@@ -1,4 +1,6 @@
 ﻿using System;
+
+
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -179,6 +181,13 @@ namespace GitExercise_1
 
             Circle C1 = new Circle(new Point { x = 0, y = 10 }, 10);
             Console.WriteLine("Площадь круга С1=" + C1.Area());
+
+
+
+
+
+            var str = System.Text.Json.JsonSerializer.Serialize(C1);
+            Console.WriteLine(str);
 
             Console.ReadLine();
         }
