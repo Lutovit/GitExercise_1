@@ -111,6 +111,9 @@ namespace GitExercise_1
             Triangle T1 = new Triangle { p1 = new Point {x=0, y=0 }, p2 = new Point {x=3, y=0 }, p3 = new Point {x=3, y=4 } };
             Console.WriteLine("Площадь треугольника Т1 = " + T1.Area() );
 
+            Triangle T2 = new Triangle { p1 = new Point { x = 0, y = 15 }, p2 = new Point { x = 3, y = -12.56 }, p3 = new Point { x = 1.756, y = 4 } };
+            Console.WriteLine("Площадь треугольника Т2 = " + T2.Area());
+
 
             Console.ReadLine();
         }
