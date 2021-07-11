@@ -91,6 +91,39 @@ namespace GitExercise_1
     }
 
 
+    public class Rectangle : IShape    
+    {
+        public static int number = 0;
+        public Point p1 { set; get; }
+        public Point p2 { set; get; }
+        public Point p3 { set; get; }
+        public Point p4 { set; get; }
+
+        public Rectangle() 
+        {
+            number++;
+            p1 = new Point { x = 0, y = 0 };
+            p2 = new Point { x = 2, y = 0 };
+            p3 = new Point { x = 2, y = 2 };
+            p4 = new Point { x = 0, y = 2 };
+        }
+
+        public Rectangle(Point p1, Point p2, Point p3, Point p4)
+        {
+            number++;
+            this.p1 = p1;
+            this.p2 = p2;
+            this.p3 = p3;
+            this.p4 = p4;
+        }
+
+        public double Area()
+        {
+            return Line.Length(p1, p2) * Line.Length(p1, p4);
+        }
+    }
+
+
 
 
 
@@ -111,6 +144,8 @@ namespace GitExercise_1
             Triangle T1 = new Triangle { p1 = new Point {x=0, y=0 }, p2 = new Point {x=3, y=0 }, p3 = new Point {x=3, y=4 } };
             Console.WriteLine("Площадь треугольника Т1 = " + T1.Area() );
 
+            Rectangle R1 = new Rectangle { p1 = new Point { x = 0, y = 0 }, p2 = new Point { x = 3, y = 0 }, p3 = new Point { x = 3, y = 4 }, p4 = new Point { x = 0, y = 4 } };
+            Console.WriteLine("Площадь прямоугольника R1 = " + R1.Area());
 
             Console.ReadLine();
         }
