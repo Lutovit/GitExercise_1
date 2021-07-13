@@ -26,6 +26,13 @@ namespace GitExercise_1
         {
             number++;        
         }
+
+        public Point(double x, double y)
+        {
+            number++;
+            this.x = x;
+            this.y = y;
+        }
     }
 
 
@@ -34,12 +41,6 @@ namespace GitExercise_1
     {
         public Point p1 { set; get; }
         public Point p2 { set; get; }
-
-
-        public Line() 
-        {
-        
-        }
 
         public Line(Point p1, Point p2) 
         {
@@ -67,9 +68,7 @@ namespace GitExercise_1
         public Triangle() 
         {
             number++;
-            p1 = new Point { x = 0, y = 0 };
-            p2 = new Point { x = 2, y = 0 };
-            p3 = new Point { x = 1, y = 2 };
+
         }
 
         public Triangle(Point p1, Point p2, Point p3)
@@ -104,10 +103,7 @@ namespace GitExercise_1
         public Rectangle() 
         {
             number++;
-            p1 = new Point { x = 0, y = 0 };
-            p2 = new Point { x = 2, y = 0 };
-            p3 = new Point { x = 2, y = 2 };
-            p4 = new Point { x = 0, y = 2 };
+
         }
 
         public Rectangle(Point p1, Point p2, Point p3, Point p4)
@@ -136,15 +132,14 @@ namespace GitExercise_1
         public Circle()
         {
             number++;
-            centrPoint = new Point { x = 0, y = 0 };
-            radius = 1;
+
         }
 
         public Circle(Point centrPoint, double radius)
         {
             number++;
             this.centrPoint = centrPoint;
-           this.radius = radius;
+            this.radius = radius;
         }
 
         public double Area()
